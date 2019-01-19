@@ -1,0 +1,20 @@
+version: '3'
+services:
+  example11:
+    hostname: example11
+    environment:
+      - PORT=4000
+      - CONTENT="This example service 111"
+    build:
+      context: ./example1
+    ports:
+      - 80:4000
+  example22:
+    hostname: example22
+    environment:
+      - PORT=4000
+      - CONTENT="This example service 222"
+    build:
+      context: ./example1
+    ports:
+      - 81:4000
